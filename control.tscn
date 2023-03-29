@@ -2,6 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://4hvg6xxhc2bl" path="res://icon.svg" id="1_6spvo"]
 
+[sub_resource type="Animation" id="Animation_e6qlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_70nsj"]
 resource_name = "new_animation"
 loop_mode = 1
@@ -16,21 +31,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 6.28319]
-}
-
-[sub_resource type="Animation" id="Animation_e6qlt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ut4fj"]
@@ -49,6 +49,10 @@ grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(500, 300)
+texture = ExtResource("1_6spvo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(910, 279)
 texture = ExtResource("1_6spvo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
