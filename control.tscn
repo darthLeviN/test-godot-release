@@ -51,6 +51,10 @@ grow_vertical = 2
 position = Vector2(168, 303)
 texture = ExtResource("1_6spvo")
 
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(512, 465)
+texture = ExtResource("1_6spvo")
+
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(910, 279)
 texture = ExtResource("1_6spvo")
