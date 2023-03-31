@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://hqo4i4dcmota"]
+
+[ext_resource type="Shader" path="res://test.gdshader" id="1_snu8d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wpbpt"]
+shader = ExtResource("1_snu8d")
+shader_parameter/radius = 1.0
+shader_parameter/animate = false
+shader_parameter/square_scale = 0.509
+shader_parameter/albedo = Color(0.968627, 0, 0.8, 0.458824)
+shader_parameter/indicate = false
+shader_parameter/size = Vector2(600, 600)
+shader_parameter/lighting_point = Vector2(0.5, 0.5)
+shader_parameter/indicating_power = 1.0
+shader_parameter/radius_base = 0.5
+shader_parameter/static_power = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go6ab"]
+bg_color = Color(0.145098, 0.462745, 1, 1)
+
+[node name="test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Circle" type="Control" parent="."]
+material = SubResource("ShaderMaterial_wpbpt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(260, 260)
+mouse_filter = 1
+
+[node name="Layer" type="Panel" parent="Circle"]
+use_parent_material = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_go6ab")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkek2e586ke71"]
+[gd_scene load_steps=6 format=3 uid="uid://dkek2e586ke71"]
 
 [ext_resource type="Texture2D" uid="uid://4hvg6xxhc2bl" path="res://icon.svg" id="1_6spvo"]
+[ext_resource type="PackedScene" uid="uid://hqo4i4dcmota" path="res://test.tscn" id="1_gqq6a"]
 
 [sub_resource type="Animation" id="Animation_e6qlt"]
 length = 0.001
@@ -46,6 +47,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="test" parent="." instance=ExtResource("1_gqq6a")]
+layout_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(168, 303)
