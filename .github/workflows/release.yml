@@ -33,7 +33,10 @@ jobs:
       with:
         # Defining all the required inputs
         godot_executable_download_url: https://github.com/ProjectLam/godot-build-scripts/releases/download/0.0-7c6df74978-20230412/godot-linux-0.0.tar.gz
-        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.0.1/Godot_v4.0.1-stable_export_templates.tpz
+        godot_export_templates_linux_download_url: https://github.com/ProjectLam/godot-build-scripts/releases/download/0.0-7c6df74978-20230412/godot-linux-0.0.tar.gz
+        godot_export_templates_windows_download_url: https://github.com/ProjectLam/godot-build-scripts/releases/download/0.0-7c6df74978-20230412/godot-windows-0.0.tar.gz
+        godot_export_templates_web_download_url: https://github.com/ProjectLam/godot-build-scripts/releases/download/0.0-7c6df74978-20230412/godot-web-0.0.tar.gz
+        # godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.0.1/Godot_v4.0.1-stable_export_templates.tpz
         wine_path: ${{ steps.wine_install.outputs.WINE_PATH }} # set the wine path here which is the output of the wine_install step
         relative_project_path: ./
         archive_output: true
